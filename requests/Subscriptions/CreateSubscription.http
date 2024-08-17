@@ -6,7 +6,7 @@ Content-Type: application/json
 
 {
     "SubscriptionType": "Free",
-    "AdminId": "{{adminId}}"
+    "AdminId": "2150e333-8fdc-42a3-9474-1a3956d46de"
 }
 
 # {
