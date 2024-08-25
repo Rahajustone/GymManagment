@@ -1,5 +1,4 @@
 using GymManagement.Domain.Gyms;
-using GymManagement.Domain.Subscriptions;
 using TestCommon.TestConstants;
 
 namespace TestCommon.Gyms;
@@ -15,7 +14,6 @@ public static class GymFactory
             name,
             maxRooms,
             subscriptionId: Constants.Subscriptions.Id,
-            id: id ?? Constants.Subscriptions.Id
-        );
+            id: id ?? Constants.Gym.Id);
     }
 }

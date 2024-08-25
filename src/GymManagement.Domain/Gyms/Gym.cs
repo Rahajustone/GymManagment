@@ -57,11 +57,6 @@ public class Gym
         return Result.Success;
     }
 
-    public bool HasTrainer(Guid trainerId)
-    {
-        return _trainerIds.Contains(trainerId);
-    }
-
     public void RemoveRoom(Guid roomId)
     {
         _roomIds.Remove(roomId);

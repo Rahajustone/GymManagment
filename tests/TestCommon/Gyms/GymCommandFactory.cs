@@ -11,7 +11,6 @@ public static class GymCommandFactory
     {
         return new CreateGymCommand(
             Name: name,
-            SubscriptionId: subscriptionId ?? Constants.Subscriptions.Id
-        );
+            SubscriptionId: subscriptionId ?? Constants.Subscriptions.Id);
     }
 }

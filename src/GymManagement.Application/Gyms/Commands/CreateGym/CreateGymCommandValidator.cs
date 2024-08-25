@@ -7,8 +7,7 @@ public class CreateGymCommandValidator : AbstractValidator<CreateGymCommand>
     public CreateGymCommandValidator()
     {
         RuleFor(x => x.Name)
-        .NotEmpty()
-        .MinimumLength(3)
-        .MaximumLength(100);
+            .MinimumLength(3)
+            .MaximumLength(100);
     }
 }

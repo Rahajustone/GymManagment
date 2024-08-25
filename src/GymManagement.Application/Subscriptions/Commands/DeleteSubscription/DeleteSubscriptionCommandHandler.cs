@@ -32,15 +32,7 @@ public class DeleteSubscriptionCommandHandler(
 
         admin.DeleteSubscription(command.SubscriptionId);
 
-        // Use Domain Event Pattern
-        // var gymsToDelete = await _gymsRepository.ListBySubscriptionIdAsync(command.SubscriptionId);
-
         await _adminsRepository.UpdateAsync(admin);
-
-        // Use Domain Event Pattern
-        // await _subscriptionsRepository.RemoveSubscriptionAsync(subscription);
-        // await _gymsRepository.RemoveRangeAsync(gymsToDelete);
-        
         await _unitOfWork.CommitChangesAsync();
 
         return Result.Deleted;

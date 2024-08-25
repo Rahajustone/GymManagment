@@ -3,7 +3,7 @@ using TestCommon.TestConstants;
 
 namespace TestCommon.Subscriptions;
 
-public static class SubscriptionFactory 
+public static class SubscriptionFactory
 {
     public static Subscription CreateSubscription(
         SubscriptionType? subscriptionType = null,
@@ -12,8 +12,7 @@ public static class SubscriptionFactory
     {
         return new Subscription(
             subscriptionType: subscriptionType ?? Constants.Subscriptions.DefaultSubscriptionType,
-            adminId: adminId ?? Constants.Admin.Id,
-            id: id ?? Constants.Subscriptions.Id
-        );
+            adminId ?? Constants.Admin.Id,
+            id ?? Constants.Subscriptions.Id);
     }
-} 
+}

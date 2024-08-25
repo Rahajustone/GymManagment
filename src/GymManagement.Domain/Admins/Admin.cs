@@ -14,7 +14,7 @@ public class Admin : Entity
         Guid userId,
         Guid? subscriptionId = null,
         Guid? id = null)
-        : base(id ?? Guid.NewGuid())
+            : base(id ?? Guid.NewGuid())
     {
         UserId = userId;
         SubscriptionId = subscriptionId;

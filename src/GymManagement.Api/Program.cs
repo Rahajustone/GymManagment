@@ -1,5 +1,6 @@
 using GymManagement.Application;
 using GymManagement.Infrastructure;
+using GymManagement.Infrastructure.Common.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 {
@@ -18,7 +19,7 @@ var app = builder.Build();
 {
     app.UseExceptionHandler();
     app.AddInfrastructureMiddleware();
-    // app.UseMiddleware<EventualConsistencyMiddleware>();
+
     if (app.Environment.IsDevelopment())
     {
         app.UseSwagger();

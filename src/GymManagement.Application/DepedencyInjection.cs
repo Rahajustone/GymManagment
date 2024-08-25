@@ -1,6 +1,5 @@
 using ErrorOr;
 using FluentValidation;
-using FluentValidation.AspNetCore;
 using GymManagement.Application.Common.Behaviors;
 using GymManagement.Application.Gyms.Commands.CreateGym;
 using GymManagement.Domain.Gyms;
@@ -16,11 +15,8 @@ public static class DependencyInjection
         services.AddMediatR(options =>
         {
             options.RegisterServicesFromAssemblyContaining(typeof(DependencyInjection));
-            options.AddBehavior<
-                IPipelineBehavior<CreateGymCommand, ErrorOr<Gym>>,
-                CreateGymCommandBehaviour>();
 
-            // options.AddBehavior(typeof(ValidationBehavior<,>));
+            options.AddOpenBehavior(typeof(ValidationBehavior<,>));
         });
 
         services.AddValidatorsFromAssemblyContaining(typeof(DependencyInjection));
