@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using GymManagement.Application.Profiles.ListProfiles;
 using GymManagement.Contracts.Profiles;
 using GymManagement.Application.Profiles.Commands.CreateAdminProfile;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GymManagement.Api.Controllers;
 

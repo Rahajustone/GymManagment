@@ -4,20 +4,8 @@ POST {{host}}/authentication/register
 Content-Type: application/json
 
 {
-    "FirstName": "Rahmatullo",
-    "LastName": "Kholov",
-    "Email": "rkholov@gmail.com",
-    "Password": "Raha6644031234!!"
-}
-
-####
-
-POST {{host}}/authentication/register
-Content-Type: application/json
-
-{
-    "FirstName": "Manuk",
-    "LastName": "Mush",
-    "Email": "manuk@gmail.com",
-    "Password": "Manuk341234!!"
+    "FirstName": "Lior",
+    "LastName": "Mantinband",
+    "Email": "lior@mantinband.com",
+    "Password": "Amiko1234!!"
 }

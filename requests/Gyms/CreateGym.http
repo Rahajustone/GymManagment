@@ -1,11 +1,13 @@
 @host=http://localhost:5209
-@subscriptionId=4ac33bcf-8997-403d-8576-1ef4801e1e00
+@subscriptionId=8d4e1e76-2579-4736-a953-43ca02574ad5
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTGlvciIsImZhbWlseV9uYW1lIjoiTWFudGluYmFuZCIsImVtYWlsIjoibGlvckBtYW50aW5iYW5kLmNvbSIsImlkIjoiZTMxZWVjODctNmNmNi00MGE5LWJlMWUtZmNiMzExM2JmZDJmIiwicGVybWlzc2lvbnMiOlsiZ3ltczpjcmVhdGUiLCJneW1zOnVwZGF0ZSJdLCJhZG1pbklkIjoiMmMwZDdiMGUtODMxMi00NzNhLWFlMjQtYzQ2ZDNjYjU4Y2I4Iiwicm9sZXMiOiJBZG1pbiIsImV4cCI6MTcwMTM3MDkyOCwiaXNzIjoiR3ltTWFuYWdlbWVudCIsImF1ZCI6Ikd5bU1hbmFnZW1lbnQifQ.BC2Y6DHDql2WhNgU5yw5rpayM7I7eiI0fEAxnYNSb5U
 
 POST {{host}}/subscriptions/{{subscriptionId}}/gyms
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
-    "Name": "A"
+    "Name": "Amiko123"
 }
 
 ###
