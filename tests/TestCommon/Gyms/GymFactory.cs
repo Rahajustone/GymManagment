@@ -2,9 +2,9 @@ using GymManagement.Domain.Gyms;
 using GymManagement.Domain.Subscriptions;
 using TestCommon.TestConstants;
 
-namespace TestCommon.Subscriptions;
+namespace TestCommon.Gyms;
 
-public static class GymFactory 
+public static class GymFactory
 {
     public static Gym CreateGym(
         string name = Constants.Gym.Name,
@@ -18,4 +18,4 @@ public static class GymFactory
             id: id ?? Constants.Subscriptions.Id
         );
     }
-} 
+}

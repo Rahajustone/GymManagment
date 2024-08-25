@@ -17,9 +17,13 @@ public class ValidationBehavior<TRequest, TResponse>(IValidator<TRequest> valida
         RequestHandlerDelegate<TResponse> next,
         CancellationToken cancellationToken)
     {
+        if (_validator is null)
+            return await next();
+
         var validationResult = await _validator.ValidateAsync(request, cancellationToken);
 
-        if(validationResult.IsValid){
+        if (validationResult.IsValid)
+        {
             return await next();
         }
 
@@ -27,7 +31,7 @@ public class ValidationBehavior<TRequest, TResponse>(IValidator<TRequest> valida
         .ConvertAll(error => Error.Validation(
             code: error.PropertyName,
             description: error.ErrorMessage));
-    
+
         return (dynamic)errors;
     }
 }

@@ -1,6 +1,7 @@
 using ErrorOr;
 using FluentAssertions;
 using GymManagement.Domain.Subscriptions;
+using TestCommon.Gyms;
 using TestCommon.Subscriptions;
 
 namespace GymManagment.Domain.Unittests.Subscription;
@@ -16,9 +17,9 @@ public class SubscriptionTests
 
         // Create the maximum number of gyms + 1
         var gyms = Enumerable.Range(0, subscriptions.GetMaxGyms() + 1)
-            .Select( _ => GymFactory.CreateGym(id: Guid.NewGuid()))
-            .ToList();  
-        
+            .Select(_ => GymFactory.CreateGym(id: Guid.NewGuid()))
+            .ToList();
+
         // Act
         var resutls = gyms.ConvertAll(gym => subscriptions.AddGym(gym));
 
@@ -31,4 +32,4 @@ public class SubscriptionTests
         lastGymResult.FirstError.Should().Be(
             SubscriptionErrors.CannotHaveMoreGymsThanTheSubscriptionAllows);
     }
-}  
+}
