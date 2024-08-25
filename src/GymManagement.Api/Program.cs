@@ -9,10 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
     builder.Services.AddSwaggerGen();
     builder.Services.AddProblemDetails();
     builder.Services.AddHttpContextAccessor();
+    builder.Services.AddScoped<ICurrentUserProvider, CurrentUserProvider>();
 
     builder.Services
         .AddApplication()
-        .AddInfrastructure();
+        .AddInfrastructure(builder.Configuration);
 }
 
 var app = builder.Build();
